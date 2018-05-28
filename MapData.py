@@ -5,7 +5,7 @@ app.debug = True
 
 MapData = {
 	'EAT':{
-			1:{'name':'', 'location':'', 'detail':'', 'comment':''},
+			1:{'name':'test', 'location':'test', 'detail':'test', 'comment':'test'},
 	},
 	'TRANS':{
 			1:{'name':'', 'location':'', 'detail':'', 'comment':''},
@@ -17,9 +17,9 @@ MapData = {
 			1:{'name':'', 'location':'', 'detail':'', 'comment':''},
 	},
 }
-#@app.route('/', method=['GET'])
-#def info(specie,nid):
-	# information = MapData.get(specie).get(nid)
-	# return render_template('info.html', information = information)
 
-print(MapData.get('EAT').get(1))
+@app.route('/', method=['GET'])
+def info(specie,nid):
+	information = MapData.get(specie).get(nid)
+	return render_template('info.html', information = information)
+
