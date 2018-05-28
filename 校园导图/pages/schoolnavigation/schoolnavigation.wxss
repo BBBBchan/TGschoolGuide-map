@@ -1,0 +1,46 @@
+
+.bottom_menu {
+  display: flex;  
+  flex-direction: column;  
+  height: 7vh;
+  width: 750rpx;
+  background-color: #661AFF;
+  z-index: 999;
+  white-space: nowrap;
+}
+
+
+
+
+.bottom_menu scroll-view {
+    width: 750rpx;
+}
+
+.bottom_menu .search_box {
+    width: 598rpx;
+    height: 4.5vh;
+    text-align: center;
+    margin: 0 0 10rpx 50rpx;
+    border: 1rpx solid #ffffff;
+    border-radius: 10rpx;
+    display: flex;
+    font-size: 32rpx;
+    color: #ffffff;
+}
+
+.bottom_menu scroll-view view {
+    font-size: 30rpx;
+    line-height: 4vh;
+    text-align: center;
+    color: #fff;
+    width: 100rpx;
+    margin: 0 10rpx;
+    display: inline-block;
+    padding-bottom: 10rpx;
+}
+
+.bottom_menu .now {
+    font-size: 34rpx;
+    font-weight: bold;
+    border-bottom: 5rpx solid #fff;
+}

@@ -1,0 +1,26 @@
+<!--pages/schoolnavigation/news.wxml-->
+<swiper indicator-dots='true' autoplay="true" interval="3000">
+        <swiper-item><image src="/imgs/1.png"></image></swiper-item>
+        <swiper-item><image src="/imgs/2.png"></image></swiper-item>
+        <swiper-item><image src="/imgs/3.png"></image></swiper-item>
+        <swiper-item><image src="/imgs/4.png"></image></swiper-item>
+        <swiper-item><image src="/imgs/5.png"></image></swiper-item>
+</swiper>
+<view>
+    <block wx:for="{{posts_key}}" wx:for-item="item">
+        <view class="post-container">
+          <view class="post-author-date">
+            <image src="{{item.author_img}}" class="post-author"></image>
+            <text class="post-date">{{item.data}}</text>
+          </view>
+          <image class="post-image"src="{{item.img_dl}}"></image>
+          <text class="post-content">{{item.content}}</text>
+          <view class="post-like">
+            <image class="post-like-image" src="/imgs/chat.png"></image>
+            <text class="post-like-font">{{item.collec_num}}</text>
+            <image class="post-like-image" src="/imgs/chat1.png"></image>
+            <text class="post-like-font">{{item.view_num}}</text>
+          </view>
+        </view>
+    </block>
+</view>

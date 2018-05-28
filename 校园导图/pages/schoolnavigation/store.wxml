@@ -1,0 +1,41 @@
+<dl class="menu">
+      <dt data-index="0" bindtap="tapMainMenu">位置
+          <image src="/imgs/arrow.png" style="width:30rpx;height:30rpx;"></image>
+      </dt>
+      <dd class="{{subMenuDisplay[0]}}">
+        <ul>
+            <li class="{{subMenuHighLight[0][0]}}" data-index="0-0" bindtap="tapSubMenu">100米以内</li>
+            <li class="{{subMenuHighLight[0][1]}}" data-index="0-1" bindtap="tapSubMenu">100-500</li>
+            <li class="{{subMenuHighLight[0][2]}}" data-index="0-2" bindtap="tapSubMenu">500-1000</li>
+            <li class="{{subMenuHighLight[0][3]}}" data-index="0-3" bindtap="tapSubMenu">1000-3000</li>
+            <li class="{{subMenuHighLight[0][4]}}" data-index="0-4" bindtap="tapSubMenu">3000以上</li>
+        </ul>
+      </dd>
+</dl>
+<dl class="menu">
+      <dt data-index="0" bindtap="tapMainMenu2">品类
+          <image src="/imgs/arrow.png" style="width:30rpx;height:30rpx;"></image>
+      </dt>
+      <dd class="{{subMenuDisplay[1]}}">
+        <ul>
+            <li class="{{subMenuHighLight[1][0]}}" data-index="1-0" bindtap="tapSubMenu">川菜类</li>
+            <li class="{{subMenuHighLight[1][1]}}" data-index="1-1" bindtap="tapSubMenu">快餐类</li>
+            <li class="{{subMenuHighLight[1][2]}}" data-index="1-2" bindtap="tapSubMenu">奶茶饮品类</li>
+            <li class="{{subMenuHighLight[1][3]}}" data-index="1-3" bindtap="tapSubMenu">烧烤类</li>
+            <li class="{{subMenuHighLight[1][4]}}" data-index="1-4" bindtap="tapSubMenu">民族特色类</li>
+        </ul>
+      </dd>
+</dl>
+<dl class="menu">
+      <dt data-index="0" bindtap="tapMainMenu2">排序
+          <image src="/imgs/arrow.png" style="width:30rpx;height:30rpx;"></image>
+      </dt>
+      <dd class="{{subMenuDisplay[2]}}">
+        <ul>
+            <li class="{{subMenuHighLight[2][0]}}" data-index="0-0" bindtap="tapSubMenu">好评优先</li>
+            <li class="{{subMenuHighLight[2][1]}}" data-index="2-1" bindtap="tapSubMenu">位置优先</li>
+            <li class="{{subMenuHighLight[2][2]}}" data-index="2-2" bindtap="tapSubMenu">价格由低到高</li>
+            <li class="{{subMenuHighLight[2][3]}}" data-index="2-3" bindtap="tapSubMenu">价格由高到低</li>
+        </ul>
+      </dd>
+</dl>
