@@ -63,7 +63,6 @@ def info(specie,nid):
 		info = curs.fetchall()
 		curs.execute('''SELECT comment FROM comments where specie = ? and nid = ?''', [specie,nid])
 		info += curs.fetchall()
-		print(info)
 		if info:			
 			return jsonify(info)
 		else:
