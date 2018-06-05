@@ -6,9 +6,9 @@ app = Flask(__name__)
 app.debug = True
 
 def dict_factory(cursor, row):  					#转换元组为字典类型
-    d = {}  
-    for idx, col in enumerate(cursor.description):  
-        d[col[0]] = row[idx]  
+    d = {}
+    for idx, col in enumerate(cursor.description):
+            d[col[0]] = row[idx]  
     return d
  
 def connect_db():
