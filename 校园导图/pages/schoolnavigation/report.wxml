@@ -48,9 +48,9 @@
   <view class="postcontainer" style="margin-left:130rpx;">
     <view >西电学生会QQ:<text style="color:blue;">1174500887</text></view>
     <view >西电治安服务队QQ群:<text style="color:blue;">3154481046</text></view>
-
+    
   </view>
-  
+  <view style="text-align:center;">Powered by 为之工作室</view>
 </view>
 <view style="margin-left:100rpx;margin-top:50rpx;margin-bottom:100rpx;float:left;">
     <button class="submit" bindtap="submittap">取消举报</button>

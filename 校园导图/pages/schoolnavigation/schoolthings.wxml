@@ -1,0 +1,15 @@
+
+
+<view class="PageCont PageWithTitle" style="padding-top:{{NavBarHeight}}px;">
+    <view class="header" style="background: {{StyleColor}};padding-top:{{NavBarHeight}}px;">
+            <view bindtap="TypeChange" class="item {{index==Type?'on':''}}" data-id="{{index}}" wx:for="{{TypeArray}}">{{item}}</view>
+            <view  class="add" >
+              发布
+            </view>
+            <view bindtap="add" class="add" >
+             关于
+            </view>
+            
+             
+    </view>
+</view>

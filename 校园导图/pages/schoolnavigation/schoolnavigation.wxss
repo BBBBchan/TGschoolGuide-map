@@ -1,5 +1,17 @@
 
-.bottom_menu {
+.picker-bottom{
+  font-size:35rpx;
+  color:white;
+  float:bottom;
+  display:flex;
+  flex-direction:column;    
+  background-color:#661AFF;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  height:7vh;
+}
+.top_menu {
   display: flex;  
   flex-direction: column;  
   height: 7vh;
@@ -9,14 +21,11 @@
   white-space: nowrap;
 }
 
-
-
-
-.bottom_menu scroll-view {
+.top_menu scroll-view {
     width: 750rpx;
 }
 
-.bottom_menu .search_box {
+.top_menu .search_box {
     width: 598rpx;
     height: 4.5vh;
     text-align: center;
@@ -28,7 +37,7 @@
     color: #ffffff;
 }
 
-.bottom_menu scroll-view view {
+.top_menu scroll-view view {
     font-size: 30rpx;
     line-height: 4vh;
     text-align: center;
@@ -39,8 +48,74 @@
     padding-bottom: 10rpx;
 }
 
-.bottom_menu .now {
+.top_menu .now {
     font-size: 34rpx;
     font-weight: bold;
     border-bottom: 5rpx solid #fff;
 }
+
+.bottom{
+  width: 100%; 
+  height: 86vh;
+  float:bottom;
+}
+
+.expect{
+  width: 100%;
+   height: 93vh;
+   float:bottom;
+}
+/*根布局*/
+.content-container {
+width: 100%;
+position: absolute;
+}
+/*筛选项容器布局*/
+
+
+/*筛选项隐藏 显示动画 start*/
+@keyframes slidup {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(-127%);
+  }
+}
+
+.slidup {
+  display: block;
+  animation: slidup 0.4s ease-in both;
+  width: 100%;
+  height: 650rpx;
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 50;
+  top: 108vh;
+}
+
+.menu_father{
+   font-size: 15px;float:left;width: 33.33%;height: 38px; text-align: center;background-color: #f4f4f4; color: #5a5a5a;line-height: 38px;
+}
+.menu_brother{
+  position: absolute;width: 100%;top:39px; left:0;z-index:999;
+}
+.menu_son{ 
+  background-color: #f4f4f4;
+   font-size: 14px; 
+   line-height: 34px;
+   color: #575757;
+   height: 60rpx;
+   display: block;
+   text-align: center;
+}
+
+.show {
+  display: block;
+}
+.hidden {
+  display: none;
+} 
+
+

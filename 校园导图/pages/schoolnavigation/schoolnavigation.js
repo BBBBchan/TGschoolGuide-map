@@ -3,44 +3,48 @@ Page({
   data: {
     long: "",
     lati: "",
-    markers:[
-    ],
-    controls:[
-    ],
-    // controls: [{
-    //   id: 1,
-    //   iconPath: "/imgs/news.png",
-    //   position: {
-    //     left: 10,
-    //     top: 55 - 50,
-    //     width: 40,
-    //     height: 40
-    //   },
-    //   clickable: true
-    // },
-    //   {
-    //     id: 2,
-    //     iconPath: "/imgs/warn.png",
-    //     position: {
-    //       left: 10,
-    //       top: 100 - 50,
-    //       width: 40,
-    //       height: 40
-    //     },
-    //     clickable: true
-    //   },
-    //   {
-    //     id: 3,
-    //     iconPath: "/imgs/school.png",
-    //     position: {
-    //       left: 325,
-    //       top: 50 - 50,
-    //       width: 50,
-    //       height: 50
-    //     },
-    //     clickable:false
-    //   },
-    //   ],
+    openPicker: false,
+    openLocation:false,
+    openSort:false,
+    // contentHeight: 0,
+    // markers:[
+    // ],
+    // controls:[
+    // ],
+    controls: [{
+      id: 1,
+      iconPath: "/imgs/news.png",
+      position: {
+        left: 10,
+        top: 55 - 50,
+        width: 40,
+        height: 40
+      },
+      clickable: true
+    },
+      {
+        id: 2,
+        iconPath: "/imgs/warn.png",
+        position: {
+          left: 10,
+          top: 100 - 50,
+          width: 40,
+          height: 40
+        },
+        clickable: true
+      },
+      {
+        id: 3,
+        iconPath: "/imgs/school.png",
+        position: {
+          left: 325,
+          top: 50 - 50,
+          width: 50,
+          height: 50
+        },
+        clickable:false
+      },
+      ],
     tab: [  
       {
         id: 1,
@@ -84,6 +88,7 @@ Page({
       }
     )
     this.mapCtx = wx.createMapContext('map')
+
     var t = {
       currentTarget: {
         dataset: {
@@ -92,13 +97,14 @@ Page({
       }
     };
     //console.log(t);
-    this.Showmarker(t);  
+    this.Showmarker(t);
   },
+  
   Showmarker: function (t) {
         
    var innerMap = [
      {
-       id: 1,
+       id: 0,
        latitude: "34.120857",
        longitude: "108.833662",
        iconPath: "/imgs/ic_position.png",
@@ -116,13 +122,13 @@ Page({
    ] 
    var eat = [
     {
-      id: 1,
-      latitude: 34.126691,
-      longitude: 108.837433,
+      id: 11,
+      latitude: 34.128250,
+      longitude: 108.837771  ,
       iconPath: "/imgs/ic_position.png",
       title: "#",
       callout: {
-        content: "清真餐厅",
+        content: "老综合楼",
         color: "#ffffff",
         fontSize: 14,
         bgColor: "#661AFF",
@@ -132,7 +138,23 @@ Page({
       }
     },
     {
-      id: 2,
+      id: 12,
+      latitude: 34.127228,
+      longitude: 108.839267,
+      iconPath: "/imgs/ic_position.png",
+      title: "#",
+      callout: {
+        content: "新综合楼",
+        color: "#ffffff",
+        fontSize: 14,
+        bgColor: "#661AFF",
+        borderRadius: 10,
+        padding: 5,
+        display: "ALWAYS"
+      }
+    },
+    {
+      id: 13,
       latitude: 34.126158,
       longitude: 108.838989,
       iconPath: "/imgs/ic_position.png",
@@ -148,7 +170,7 @@ Page({
       }
     },
     {
-      id: 3,
+      id: 14,
       latitude: 34.129133,
       longitude: 108.833812,
       iconPath: "/imgs/ic_position.png",
@@ -164,7 +186,7 @@ Page({
       }
     },
     {
-      id: 4,
+      id: 15,
       latitude: 34.123796,
       longitude: 108.829794,
       iconPath: "/imgs/ic_position.png",
@@ -465,7 +487,7 @@ Page({
    ]
    var campus = [
      {
-       id: 0,
+       id: 20,
        latitude: "34.120857",
        longitude: "108.833662",
        iconPath: "/imgs/ic_position.png",
@@ -489,101 +511,7 @@ Page({
       long: innerMap[0].longitude, 
       markers:flags[e-1],
     });
-    if (e == 2) {
-        console.log("----------"+e);
-      this.setData({
-        controls: [
-          {
-            id: 1,
-            iconPath: "/imgs/news.png",
-            position: {
-              left: 10,
-              top: 55 - 50,
-              width: 40,
-              height: 40
-            },
-            clickable: true
-          },
-          {
-            id: 2,
-            iconPath: "/imgs/warn.png",
-            position: {
-              left: 10,
-              top: 100 - 50,
-              width: 40,
-              height: 40
-            },
-            clickable: true
-          },
-          {
-            id: 3,
-            iconPath: "/imgs/school.png",
-            position: {
-              left: 310,
-              top: 50 - 50,
-              width: 50,
-              height: 50
-            },
-            clickable: false
-          },
-          {
-          id: 4,
-          iconPath: "/imgs/result.png",
-          position: {
-            left: 0,
-            top: 490,
-            width: 375,
-            height: 50
-          },
-          clickable: true,
-        }]
-      });
-    }
-    else{
-      this.setData({
-        controls: [
-          {
-            id: 1,
-            iconPath: "/imgs/news.png",
-            position: {
-              left: 10,
-              top: 55 - 50,
-              width: 40,
-              height: 40
-            },
-            clickable: true
-          },
-          {
-            id: 2,
-            iconPath: "/imgs/warn.png",
-            position: {
-              left: 10,
-              top: 100 - 50,
-              width: 40,
-              height: 40
-            },
-            clickable: true
-          },
-          {
-            id: 3,
-            iconPath: "/imgs/school.png",
-            position: {
-              left: 310,
-              top: 50 - 50,
-              width: 50,
-              height: 50
-            },
-            clickable: false
-          }]
-      });
-    }
- 
-
-    
-   
-
     console.log("id:"+this.data.markers[0].id);
-
     console.log(this.data.lati+ ":" + this.data.long);
     this.setData({
       now_tab: e
@@ -602,10 +530,108 @@ Page({
             url: "report"
           });
         }
-            else if(4 === t.controlId){
-                wx.navigateTo({
-                  url: "store"
-                });
-            }
-  }
+            
+  },
+  
+  onPickHeaderClick: function () {
+    this.setData({
+      openPicker: !this.data.openPicker,
+      
+    })
+  },
+  onPickLocation:function(){
+    this.setData({
+      openLocation:!this.data.openLocation,
+    })
+  },
+  onPickSort:function(){
+    this.setData({
+      openSort:!this.data.openSort,
+    })
+  },
+  onPickOrder:function(){
+    this.setData({
+      openOrder:!this.data.openOrder,
+    })
+  },
+  onPickRestaurant:function(){
+    wx.navigateTo({
+      url: 'store',
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+    this.setData({
+      openLocation: !this.data.openLocation,
+    })
+  },
+ onPickRestaurantClass:function(){
+   wx.navigateTo({
+     url: 'store',
+     success: function (res) { },
+     fail: function (res) { },
+     complete: function (res) { },
+   })
+   this.setData({
+     openSort: !this.data.openSort,
+   })
+ },
+  onPickRestaurantOrder:function(){
+    wx.navigateTo({
+      url: 'store',
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
+    })
+    this.setData({
+      openOrder: !this.data.openOrder,
+    })
+  },
+  markertap: function (t) {
+    if (0 == t.markerId) {
+      wx.openLocation({
+        latitude: 34.120857,
+        longitude: 108.833662,
+        scale: 18,
+        name: '西安电子科技大学',
+        address: '西安电子科技大学郭杜镇兴隆乡',
+      })
+    }
+    if(11 === t.markerId) {
+      console.log(t)
+      wx.navigateTo({
+        url: 'store'
+      })
+    }
+    if (12 === t.markerId) {
+      console.log(t)
+      wx.navigateTo({
+        url: 'store'
+      })
+    }
+    if (13 === t.markerId) {
+      console.log(t)
+      wx.navigateTo({
+        url: 'store'
+      })
+    }
+    if (14 === t.markerId) {
+      console.log(t)
+      wx.navigateTo({
+        url: 'store'
+      })
+    }
+    if (15 === t.markerId) {
+      console.log(t)
+      wx.navigateTo({
+        url: 'store'
+      })
+    }
+    if (20 == t.markerId) {
+      wx.navigateTo({
+        url: 'schoolthings'
+      })
+    }
+  },
+
 })

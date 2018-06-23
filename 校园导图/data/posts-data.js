@@ -30,9 +30,47 @@ var local_us = [
     content: "美丽灞河，暖阳融融，宽阔的水面上数只赛艇如离弦之箭，你追我赶：二池岸的看台上是欢呼加油声，西安电子科技大学第三季大学生赛艇挑战赛在西安浐灞生态区灞河西岸滨河公园水域举行，来自西电各学院赛艇协会的17支男子队伍和7支女子长安塔畔展开激烈角逐。",
     collec_num: "534",
     view_num: "912"
-  }]
-
+  }];
+var local_restaurantlist = [
+  {
+    IMAGEURL: "/imgs/eatzizhu.png",
+    NAME: "糖醋里脊",
+    INFO: "特色菜有 口水鸡	牛肉面	浓汁鸡煲饭	淮南牛肉汤	",
+    FLOORINFO: "一楼左拐处"
+  }, {
+    IMAGEURL: "/imgs/eatzizhu.png",
+    NAME: "糖醋里脊",
+    INFO: "特色菜有 口水鸡	牛肉面	浓汁鸡煲饭	淮南牛肉汤	",
+    FLOORINFO: "一楼左拐处"
+  }, {
+    IMAGEURL: "/imgs/eatzizhu.png",
+    NAME: "糖醋里脊",
+    INFO: "特色菜有 口水鸡	牛肉面	浓汁鸡煲饭	淮南牛肉汤	",
+    FLOORINFO: "一楼左拐处"
+  }, {
+    IMAGEURL: "/imgs/eatzizhu.png",
+    NAME: "糖醋里脊",
+    INFO: "特色菜有 口水鸡	牛肉面	浓汁鸡煲饭	淮南牛肉汤	",
+    FLOORINFO: "一楼左拐处"
+  }, {
+    IMAGEURL: "/imgs/eatzizhu.png",
+    NAME: "糖醋里脊",
+    INFO: "特色菜有 口水鸡	牛肉面	浓汁鸡煲饭	淮南牛肉汤	",
+    FLOORINFO: "一楼左拐处"
+  }, {
+    IMAGEURL: "/imgs/eatzizhu.png",
+    NAME: "糖醋里脊",
+    INFO: "特色菜有 口水鸡	牛肉面	浓汁鸡煲饭	淮南牛肉汤	",
+    FLOORINFO: "一楼左拐处"
+  }, {
+    IMAGEURL: "/imgs/eatzizhu.png",
+    NAME: "糖醋里脊",
+    INFO: "特色菜有 口水鸡	牛肉面	浓汁鸡煲饭	淮南牛肉汤	",
+    FLOORINFO: "一楼左拐处"
+  },
+]
 
 module.exports = {
-  postus: local_us
+  postus: local_us,
+  restaurantlist: local_restaurantlist,
 }
