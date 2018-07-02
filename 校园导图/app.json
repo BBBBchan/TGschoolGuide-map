@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/schoolnavigation/store",
+    
+    
+    "pages/schoolnavigation/schoolthings",
+   
+    "pages/schoolnavigation/schoolnavigation",
+ 
+   
+    "pages/schoolnavigation/news",
+    "pages/schoolnavigation/report",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundColor": "#b3d4db",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#661AFF",
+    "navigationBarTitleText": "校园导图",
+    "navigationBarTextStyle": "white"
+  }
+}

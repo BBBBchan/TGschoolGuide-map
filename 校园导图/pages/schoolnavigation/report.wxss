@@ -1,0 +1,23 @@
+page{
+  font-family: Microsoft YaHei;
+}
+.postcontainer{
+  margin: 20rpx 50rpx 30rpx 50rpx;
+}
+.title{
+  margin-bottom: 13rpx;
+  font-size:35rpx;
+}
+.choice{
+  border: 1rpx solid #D9D9D9;
+  border-radius: 5px;
+  font-size: 30rpx;
+  width:650rpx;
+  height:60rpx;
+}
+.submit{
+   background-color: #661AFF;
+   color: white;
+   font-size: 30rpx;
+   width:250rpx;
+}

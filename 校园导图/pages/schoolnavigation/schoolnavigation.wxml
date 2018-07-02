@@ -1,0 +1,77 @@
+<view>
+  <view class="top_menu" style="background:{{StyleColor}};">
+    <scroll-view>
+          <view bindtap="Showmarker" class="{{item.id===now_tab?'now':''}}"     data-id="{{item.id}}" wx:for="{{tab}}">{{item.title}}
+          </view>
+    </scroll-view> 
+  </view>
+   <view>
+    <map id="map" 
+      latitude="{{lati}}"
+      longitude="{{long}}"
+      scale="16" 
+      controls="{{controls}}"    
+      show-location
+      bindcontroltap="controltap" 
+      markers="{{markers}}" 
+      bindmarkertap="markertap" 
+      polyline="{{polyline}}" 
+      circles="{{circles}}"
+      class="{{2===now_tab?'bottom':'expect'}}"
+     >
+    </map>
+  </view>
+</view>
+   <view wx:if="{{2==now_tab}}">
+        <view  class='picker-bottom'  bindtap="onPickHeaderClick">共找到"餐饮"相关5个餐厅
+        </view>
+        <cover-view  wx:if="{{openPicker==true}}"  class="{{openPicker ? 'slidup' : ''}}" >
+       
+                              <cover-view  class="menu_father" bindtap="onPickLocation">
+                              位置
+                              </cover-view >
+
+                              <cover-view  class="menu_father" bindtap="onPickSort">
+                                品类
+                              </cover-view>
+                              <cover-view   class="menu_father" bindtap="onPickOrder">
+                                排序
+                              </cover-view>
+
+                              <cover-view wx:if="{{openLocation==true}}" style="margin-top:38px;float:left;width:33%; position: fixed;">
+                                    <cover-view class="menu_son"  bindtap="onPickRestaurant">海棠餐厅</cover-view>
+                                    <cover-view class="menu_son"  bindtap="onPickRestaurant">竹园餐厅</cover-view>
+                                    <cover-view class="menu_son"  bindtap="onPickRestaurant">丁香餐厅</cover-view>
+                                    <cover-view class="menu_son"  bindtap="onPickRestaurant">老综合楼</cover-view>
+                                    <cover-view class="menu_son"  bindtap="onPickRestaurant">新综合楼</cover-view>
+                              </cover-view> 
+                              <cover-view wx:if="{{openSort==true}}" style="margin-top:38px;margin-left:33.33%;width:33%; position: fixed;">
+                                            <cover-view class="menu_son" bindtap="onPickRestaurantClass">快餐便当</cover-view>
+                                            <cover-view class="menu_son" bindtap="onPickRestaurantClass">米粉面馆</cover-view>
+                                            <cover-view class="menu_son" bindtap="onPickRestaurantClass">地方菜系</cover-view>
+                                            <cover-view class="menu_son" bindtap="onPickRestaurantClass">炸鸡小吃</cover-view>
+                                            <cover-view class="menu_son" bindtap="onPickRestaurantClass">夹馍饼类</cover-view>
+                                            <cover-view class="menu_son" bindtap="onPickRestaurantClass">冒菜香锅</cover-view>
+                                            <cover-view class="menu_son" bindtap="onPickRestaurantClass">火锅烧烤</cover-view>
+                                            <cover-view class="menu_son" bindtap="onPickRestaurantClass">饮品甜点</cover-view>
+                                            <cover-view class="menu_son" bindtap="onPickRestaurantClass">西餐料理</cover-view>
+                              </cover-view> 
+                              
+                              <cover-view wx:if="{{openOrder==true}}" style="margin-top:38px;margin-left:66.66%;width:33%; position: fixed;">
+                                            <cover-view class="menu_son" bindtap="onPickRestaurantOrder">好评优先</cover-view>
+                                            <cover-view class="menu_son" bindtap="onPickRestaurantOrder">人气优先</cover-view>
+                              </cover-view> 
+        
+        
+                                            <cover-image src="../../imgs/eat1.png" style="width:750rpx;height:187rpx;">
+                                            </cover-image>
+                                            <cover-image src="../../imgs/eat2.png" style="width:750rpx;height:187rpx;">
+                                            </cover-image>
+                                            <cover-image src="../../imgs/eat3.png" style="width:750rpx;height:187rpx;">
+                                            </cover-image>
+                                              
+         
+        </cover-view>
+</view>
+
+

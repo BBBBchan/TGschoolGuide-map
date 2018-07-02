@@ -1,0 +1,60 @@
+<!--pages/schoolnavigation/report.wxml-->
+<!-- <text>本页为举报页面。</text> -->
+<view>
+  <view class="postcontainer">
+    <view class="title">店名<text style="color:red;">*</text></view>
+    <input class="choice"  auto-focus placeholder="检索式输入店名，需与已有数据库匹配" maxlength="30" type="text"></input>
+  </view>
+  <view class="postcontainer">
+    <view class="title">商品/服务名称<text style="color:red;">*</text></view>
+    <input class="choice" auto-focus placeholder="用户自行输入" maxlength="30" type="text"></input>
+  </view>
+  <view class="postcontainer" >
+    <view class="title" >侵权原因(由相关法律有如下选项)<text style="color:red;">*</text></view>  
+    <checkbox-group  bindchange="listenCheckboxChange"  style="display:flex;flex-direction: column;">
+    <!--这里用label显示内容，for循环写法 wx:for-items 默认item为每一项-->
+        <label style="font-size:32rpx;" wx:for-items="{{items}}">
+        <!--value值和默认选中状态都是通过数据绑定在js中的-->
+            <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+        </label>
+    </checkbox-group>
+  </view>
+  <view class="postcontainer">
+    <view class="title">侵权说明<text style="color:red;">*</text></view>
+    <textarea class="choice" auto-focus placeholder="请具体描述"></textarea>  
+  </view>
+  <view class="postcontainer">
+    <view class="title">上传图片<text style="color:red;">*</text></view>
+    <image class="choice"  bindtap="chooseimage" src="{{tempFilePaths }}" mode="aspecFill" style="width:650rpx; height: 450rpx"/>
+  </view>
+
+  <view class="postcontainer">
+    <view class="title">姓名<text style="color:red;">*</text></view>
+    <input  class="choice" auto-focus placeholder="单行输入" maxlength="30" type="text"></input>    
+  </view>
+  <view class="postcontainer">
+    <view class="title">学号<text style="color:red;">*</text></view>
+    <input  class="choice" auto-focus placeholder="单行输入" maxlength="30" type="text"></input>   
+  </view>
+  <view class="postcontainer">
+    <view class="title">联系方式<text style="color:red;">*</text></view>
+    <input  class="choice" auto-focus placeholder="单行输入" maxlength="30" type="text"></input>   
+  </view>
+
+
+  <view style="text-align:center;color:red;">我们承诺会对您的信息严格保密！</view>
+
+  <view  class="postcontainer">联系我们:</view>
+  <view class="postcontainer" style="margin-left:130rpx;">
+    <view >西电学生会QQ:<text style="color:blue;">1174500887</text></view>
+    <view >西电治安服务队QQ群:<text style="color:blue;">3154481046</text></view>
+    
+  </view>
+  <view style="text-align:center;">Powered by 为之工作室</view>
+</view>
+<view style="margin-left:100rpx;margin-top:50rpx;margin-bottom:100rpx;float:left;">
+    <button class="submit" bindtap="submittap">取消举报</button>
+  </view>
+<view style="margin-right:100rpx;margin-top:50rpx;margin-bottom:100rpx;float:right;">
+    <button class="submit"  bindtap="submittap">提交举报</button>
+</view>
